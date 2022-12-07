@@ -4,8 +4,8 @@ This is an e-commerce app where users can view, create, update and delete produc
 
 ### Technologies Used
 
-HTML5
-CSS 3
+* HTML5
+* CSS 3
 Javascript
 Express JS
 jQuery
