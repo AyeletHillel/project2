@@ -44,9 +44,20 @@ app.use(express.urlencoded({extended: true}))
 
 // routes
 
+// index route
+app.get("/products", (req, res) => {
+    // get all products
+    Product.find({})
+    .then((products) => {
+        res.json(products)
+        // res.render("products/index.ejs", { products })
+
+    })
+})
+
 app.get("/products/seed", (req, res) => {
 
-    // array of starter fruits
+    // array of starter producs
     const startProducts = [
           { title: "Yin Yang Wolf Mates Triblend T-Shirt", type: "T-Shirt", description: "Relaxed Fit; Stretchy and Breathable", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/24518/120110/5456870042__57350.1649285605.jpg?c=2", price: 35 },
           { title: "White Wolf Moon Women's V-Neck Triblend Tee", type: "T-Shirt", description: "Our tri-blend tee is a relaxed, fitted style made of 25% cotton, 25% rayon, and 50% polyester, which basically makes it the softest t-shirt you will ever own.", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/26000/121898/4156860263__96275.1650059917.jpg?c=2", price: 35 },
@@ -55,11 +66,11 @@ app.get("/products/seed", (req, res) => {
           { title: "Big Face Tribal White Tiger Customized T-Shirt", type: "T-Shirt", description: "This cool graphic shirt is a great depiction of the fierce White Tiger.", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/17891/110505/10_3953_0699_web__75363.1575901486.jpg?c=2", price: 35 },
         ]
   
-    // Delete all fruits
+    // Delete all products
     Product.deleteMany({}, (err, data) => {
-      // Seed Starter Fruits
+      // Seed Starter Products
       Product.create(startProducts,(err, data) => {
-          // send created fruits as response to confirm creation
+          // send created products as response to confirm creation
           res.json(data);
         }
       );
