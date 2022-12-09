@@ -49,8 +49,7 @@ app.get("/products", (req, res) => {
     // get all products
     Product.find({})
     .then((products) => {
-        res.json(products)
-        // res.render("products/index.ejs", { products })
+        res.render("products/index.ejs", { products })
 
     })
 })

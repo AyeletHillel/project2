@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <main>
+            <div>
+                <% for (product of products) { %>
+                    <article>
+                        <a href="/products/<%=product._id%>">
+                            <h2>
+                                <%= product.title %>
+                            </h2>
+                            <img src="<%=product.image%>">
+                        </a>
+                    </article>
+                <% } %>
+            </div>
+        </main>
+    </body>
+</html>
