@@ -36,7 +36,7 @@ const Product = model("Product", productSchema)
 
 // register my middleware
 app.use(morgan("tiny"))
-app.use("/static", express.static("public"))
+app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
 // app.use("/", (req, res) => {
