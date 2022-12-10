@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head.ejs") %>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <main>
+            <div>
+                <form action="/products" method="POST">
+                    <fieldset>
+                        <legend>Add a New Product</legend>
+                        <label>
+                            Title:<input
+                                type="text"
+                                name="title"
+                                value="<%=product.title%>"
+                                placeholder="enter product title"
+                                />
+                        </label>
+                        <label>
+                            Type:<input
+                                type="text"
+                                name="type"
+                                value="<%=product.type%>"
+                                placeholder="enter product type"
+                                />
+                        </label>
+                        <label>
+                            Description:<input
+                                type="text"
+                                name="description"
+                                value="<%=product.description%>"
+                                placeholder="enter product type"
+                                />
+                        </label>
+                        <label>
+                            Image:<input
+                                type="url"
+                                name="image"
+                                value="<%=product.image%>"
+                                placeholder="enter image URL"
+                                />
+                        </label>
+                        <label>
+                            Price:<input
+                                type="number"
+                                name="price"
+                                value="<%=product.price%>"
+                                placeholder="enter product price"
+                                />
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Save Changes" />
+                </form>
+            </div>
+            <a href="/products/"><button>Back to Main</button></a>
+        </main>
+    </body>
+</html>

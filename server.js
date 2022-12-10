@@ -67,6 +67,23 @@ app.post('/products', (req, res) => {
   })
 })
 
+// edit route
+app.get("/products/:id/edit", (req, res) =>{
+  const id = req.params.id
+  Product.findById(id, (err, product) => {
+    // res.json(product)
+    res.render("products/edit.ejs", { product })
+  })
+})
+
+// update route
+app.put("/products/:id", (req, res) => {
+  const id = req.params.id
+  Product.findByIdAndUpdate(id, req.body, {new: true}, (err, product) =>{
+    res.redirect("/products")
+  })
+})
+
 // show route
 app.get("/products/:id", (req, res) => {
 
