@@ -59,6 +59,14 @@ app.get("/products/new", (req, res) => {
   res.render("products/new.ejs")
 })
 
+// post new product
+app.post('/products', (req, res) => {
+  Product.create(req.body, (err, createdProduct) => {
+    console.log(createdProduct)
+    res.redirect("/products")
+  })
+})
+
 // show route
 app.get("/products/:id", (req, res) => {
 
