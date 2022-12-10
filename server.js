@@ -38,6 +38,7 @@ const Product = model("Product", productSchema)
 app.use(morgan("tiny"))
 app.use("/static", express.static("public"))
 app.use(express.urlencoded({extended: true}))
+app.use(methodOverride("_method"))
 // app.use("/", (req, res) => {
 //     res.send("<h1>Your server is running.. better catch it!</h1>")
 // })
@@ -79,7 +80,8 @@ app.get("/products/:id/edit", (req, res) =>{
 // update route
 app.put("/products/:id", (req, res) => {
   const id = req.params.id
-  Product.findByIdAndUpdate(id, req.body, {new: true}, (err, product) =>{
+  Product.findByIdAndUpdate(id, req.body, {new: true}, (err, product) => {
+    
     res.redirect("/products")
   })
 })
