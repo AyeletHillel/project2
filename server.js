@@ -86,18 +86,13 @@ app.put("/products/:id", (req, res) => {
   })
 })
 
-// show route
-app.get("/products/:id", (req, res) => {
-
-    // get the id from params
-    const id = req.params.id
-
-    // find the particular product from the database
-   Product.findById(id, (err, product) => {
-        // render the template with the data from the database
-        res.render("products/show.ejs", { product })
-    })
+app.delete("/products/:id", (req, res) => {
+  const id = req.params.id
+  Product.findByIdAndRemove(id, (err, product) =>{
+    res.redirect("/products")
+  })
 })
+
 
 app.get("/products/seed", (req, res) => {
 
@@ -121,6 +116,18 @@ app.get("/products/seed", (req, res) => {
     });
   });
 
+// show route
+app.get("/products/:id", (req, res) => {
+
+  // get the id from params
+  const id = req.params.id
+
+  // find the particular product from the database
+ Product.findById(id, (err, product) => {
+      // render the template with the data from the database
+      res.render("products/show.ejs", { product })
+  })
+})
 
 // start the server
 const PORT = process.env.PORT || 3000
