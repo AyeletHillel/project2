@@ -4,6 +4,20 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
+            <section class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+                <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+                    <video class="min-w-full min-h-full absolute object-cover" src="video.mp4" type="video/mp4" autoplay muted loop></video>
+                </div>
+                
+                <div class="video-content bg-violet-100 rounded">
+                    <div class="flex align-center font-light font-mono text-gray-700 grid grid-rows-2 m-20">
+                        <h1 class="text-6xl">Welcome to MyArt AI!</h1>
+                        <h2 class="text-4xl">Buy Directly From Someone Who Put Their Heart And Soul Into Making Something Special. </h2>
+                        <h2 class="text-4xl m-10">Find Things You'll Love.</h2>
+                     </div>
+                
+            </div>
+            </section>
             <div>
                 <% for (product of products) { %>
                     <article>
