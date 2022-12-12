@@ -17,6 +17,6 @@ This is an e-commerce app where users can view, create, update and delete produc
 
 ### [Trello](https://trello.com/invite/b/LHDK8PYc/ATTI7f3fb42dee3f0556055e42f8361bd46784F4DE31/project2)
 
-### [Deployed App](https://project2-4fpm.onrender.com)
+### [Deployed App](https://project2-4fpm.onrender.com/products)
 
 
