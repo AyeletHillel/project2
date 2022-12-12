@@ -4,12 +4,14 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-            <div>
-                <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+            <div class="flex justify-center align-center font-light font-mono">
+                <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-2/5 m-20" action="/products/<%= product._id %>?_method=PUT" method="POST">
+                    <div class="md:flex md:items-center mb-6">
+                        <div class="md:w-9/10">
                     <fieldset>
-                        <legend>Add a New Product</legend>
+                        <h1 class="m-10 font-bold text-5xl">Edit Product</h1>
                         <label>
-                            Title:<input
+                            Title:<input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                 type="text"
                                 name="title"
                                 value="<%=product.title%>"
@@ -17,7 +19,7 @@
                                 />
                         </label>
                         <label>
-                            Type:<input
+                            Type:<input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                 type="text"
                                 name="type"
                                 value="<%=product.type%>"
@@ -25,7 +27,7 @@
                                 />
                         </label>
                         <label>
-                            Description:<input
+                            Description:<input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                 type="text"
                                 name="description"
                                 value="<%=product.description%>"
@@ -33,7 +35,7 @@
                                 />
                         </label>
                         <label>
-                            Image:<input
+                            Image:<input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                 type="url"
                                 name="image"
                                 value="<%=product.image%>"
@@ -41,7 +43,7 @@
                                 />
                         </label>
                         <label>
-                            Price:<input
+                            Price:<input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                                 type="number"
                                 name="price"
                                 value="<%=product.price%>"
@@ -50,9 +52,11 @@
                         </label>
                     </fieldset>
                     <input type="submit" value="Save Changes" />
+                    </div>
+                    </div>
                 </form>
             </div>
-            <a href="/products/"><button>Back to Main</button></a>
+            <a href="/products/"><button class="m-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full border-transparent">Back to Main</button></a>
         </main>
     </body>
 </html>
