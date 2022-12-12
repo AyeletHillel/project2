@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include("../partials/head.ejs") %>
-    <body>
+    <body class="bg-violet-100">
         <%- include("../partials/header.ejs") %>
         <main>
             <section class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
@@ -18,20 +18,27 @@
                 
             </div>
             </section>
-            <div>
+        <div>
+            <div class="grid grid-cols-4 gap-4 font-mono">
+                
                 <% for (product of products) { %>
+                    <div class="m-20 border-4 border-indigo-500/50 rounded-md p-8">
                     <article>
                         <a href="/products/<%=product._id%>">
                             <h2>
                                 <%= product.title %>
                             </h2>
-                            <img src="<%=product.image%>">
+                        <div class="m-2 min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                            <img class="h-full w-full object-cover object-center lg:h-full lg:w-full" src="<%=product.image%>">
+                        </div>
                         </a>
                     </article>
-                <% } %>
+                </div>
+                <% } %>   
             </div>
+        </div>
             <a href="/products/new">
-                <button>Add New Product</button>
+                <button class="m-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded-full border-transparent">Add New Product</button>
 
         </main>
     </body>
