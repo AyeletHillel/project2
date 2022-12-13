@@ -98,11 +98,11 @@ app.get("/products/seed", (req, res) => {
 
     // array of starter producs
     const startProducts = [
-          { title: "Yin Yang Wolf Mates Triblend T-Shirt", type: "T-Shirt", description: "Relaxed Fit; Stretchy and Breathable", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/24518/120110/5456870042__57350.1649285605.jpg?c=2", price: 35 },
-          { title: "White Wolf Moon Women's V-Neck Triblend Tee", type: "T-Shirt", description: "Our tri-blend tee is a relaxed, fitted style made of 25% cotton, 25% rayon, and 50% polyester, which basically makes it the softest t-shirt you will ever own.", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/26000/121898/4156860263__96275.1650059917.jpg?c=2", price: 35 },
-          { title: "Retro Mothman Lightweight Hoodie Tee", type: "Hoodie", description: "In the unofficial ranking of cryptid folklore, we have to give Mothman a legit 10/10 for creepiness.", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/26321/122295/4926700741__62361.1664710760.jpg?c=2", price: 50 },
-          { title: "Namaste Watercolor Women's Scoop-Neck Tee - Black", type: "T-Shirt", description: "Wear this Namaste Watercolor t-shirt when you need to be reminded to look inward for courage, strength, and peace in a world", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/22486/117958/2791600100__40903.1634825452.jpg?c=2", price: 35 },
-          { title: "Big Face Tribal White Tiger Customized T-Shirt", type: "T-Shirt", description: "This cool graphic shirt is a great depiction of the fierce White Tiger.", image: "https://cdn11.bigcommerce.com/s-86394/images/stencil/1280x1280/products/17891/110505/10_3953_0699_web__75363.1575901486.jpg?c=2", price: 35 },
+          { title: "Normal Is Boring", type: "Laptop Sleeve", description: "Relaxed Fit; Stretchy and Breathable", image: "https://i.etsystatic.com/12080211/r/il/b70219/4256225538/il_1588xN.4256225538_tayt.jpg", price: 35 },
+          { title: "Feminist Royal Crown", type: "Laptop Sleeve", description: "Our tri-blend tee is a relaxed, fitted style made of 25% cotton, 25% rayon, and 50% polyester, which basically makes it the softest t-shirt you will ever own.", image: "https://i.etsystatic.com/12080211/r/il/3e3d42/4303258685/il_1588xN.4303258685_j248.jpg", price: 35 },
+          { title: "Flower Crown Queen", type: "Laptop Sleeve", description: "Feminine Powerful Artwork Laptop Sleeve", image: "https://i.etsystatic.com/12080211/r/il/120467/4255861722/il_1588xN.4255861722_e2ep.jpg", price: 50 },
+          { title: "Flower Love", type: "Tote Bag Purse", description: "Wear this Namaste Watercolor t-shirt when you need to be reminded to look inward for courage, strength, and peace in a world", image: "https://i.etsystatic.com/12080211/r/il/9977d7/4255749296/il_1588xN.4255749296_rju3.jpg", price: 35 },
+          { title: "Royal Tea Cup", type: "Cup", description: "Contemporary African Art Feminine Hearts Love Earrings", image: "https://i.etsystatic.com/12080211/r/il/3a3911/4303234505/il_1588xN.4303234505_qu4i.jpg", price: 15 },
         ]
   
     // Delete all products
